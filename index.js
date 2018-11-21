@@ -49,7 +49,7 @@ class App extends React.Component {
             });
         }
   }
- //varun
+ //paras
   del(key){
      console.log("reached in parent");
      //console.log(key);
