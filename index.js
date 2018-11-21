@@ -1,10 +1,19 @@
-const List = props => (
-  <ul>
-    {
-      props.items.map((item, index) => <li key={index}>{item}</li>)
-    }
-  </ul>
-);
+class List extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    //console.log("success")
+    return (
+        <ul>
+          {
+            this.props.items.map((item, index) => <li key={index}>{item}</li>)
+          }
+        </ul>
+    );
+  }
+}
 
 class App extends React.Component {
   constructor(props) {
@@ -30,6 +39,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+      
         <form className="App" onSubmit={this.onSubmit}>
           <input value={this.state.term} onChange={this.onChange} />
           <button>Submit</button>
@@ -39,6 +49,7 @@ class App extends React.Component {
     );
   }
 }
+
 
 ReactDOM.render(
   <App/>,
